@@ -16,21 +16,73 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .fish {
     position: absolute;
-    max-width: 200px; /* Adjust as needed */
-    max-height: 200px; /* Adjust as needed */
+    max-width: 200px; 
+    max-height: 200px; 
 }
 
 .fish-leg {
-    bottom: 0; /* Start at the bottom */
+    bottom: 0; 
     animation: swim-straight 10s linear infinite;
 }
 
 .fish1 {
     animation: swim-random 15s linear infinite;
+}
+
+.mini-fish {
+    left: 50%; 
+    animation: swim-random-2 8s linear infinite;
+}
+
+.monster-fish {
+    animation: swim-random-3 12s linear infinite;
+}
+
+.yallow-fish {
+    animation: swim-random-4 20s linear infinite;
+}
+
+.seaweed {
+    position: absolute;
+    width: 150px;
+    height: auto;
+}
+
+.seaweed-1 {
+    bottom: 0;
+    left: 0;
+}
+
+.seaweed-2 {
+    bottom: 0;
+    right: 0;
+}
+
+.bubble {
+    position: absolute;
+    width: 100px;
+    height: auto;
+}
+
+.bubble-1 {
+    bottom: 20%;
+    left: 10%;
+}
+
+.bubble-2 {
+    bottom: 20%;
+    right: 10%;
+}
+
+.settings-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 @keyframes swim-straight {
@@ -40,7 +92,7 @@ html, body {
     }
     50% {
         left: 100%;
-        transform: scaleX(-1); /* Flip the fish when it reaches the end */
+        transform: scaleX(-1);
     }
     100% {
         left: 0;
@@ -71,7 +123,71 @@ html, body {
     }
 }
 
-.mini-fish {
-    left: 50%; /* Start in the middle horizontally */
-    animation: none; /* Disable CSS animation */
+@keyframes swim-random-2 {
+    0% {
+        top: 20%;
+        left: 50%;
+    }
+    25% {
+        top: 40%;
+        left: 30%;
+    }
+    50% {
+        top: 60%;
+        left: 70%;
+    }
+    75% {
+        top: 50%;
+        left: 40%;
+    }
+    100% {
+        top: 20%;
+        left: 50%;
+    }
+}
+
+@keyframes swim-random-3 {
+    0% {
+        top: 0%;
+        left: 0%;
+    }
+    25% {
+        top: 25%;
+        left: 50%;
+    }
+    50% {
+        top: 50%;
+        left: 100%;
+    }
+    75% {
+        top: 75%;
+        left: 50%;
+    }
+    100% {
+        top: 0%;
+        left: 0%;
+    }
+}
+
+@keyframes swim-random-4 {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+    25% {
+        top: 60%;
+        left: 20%;
+    }
+    50% {
+        top: 70%;
+        left: 80%;
+    }
+    75% {
+        top: 30%;
+        left: 60%;
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+    }
 }
