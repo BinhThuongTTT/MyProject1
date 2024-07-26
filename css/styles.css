@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #87CEEB; 
+}
+
+.background-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../image/background.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fish {
+    position: absolute;
+    max-width: 200px; /* Adjust as needed */
+    max-height: 200px; /* Adjust as needed */
+}
+
+.fish-leg {
+    bottom: 0; /* Start at the bottom */
+    animation: swim-straight 10s linear infinite;
+}
+
+.fish1 {
+    animation: swim-random 15s linear infinite;
+}
+
+@keyframes swim-straight {
+    0% {
+        left: 0;
+        transform: scaleX(1);
+    }
+    50% {
+        left: 100%;
+        transform: scaleX(-1); /* Flip the fish when it reaches the end */
+    }
+    100% {
+        left: 0;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes swim-random {
+    0% {
+        top: 10%;
+        left: 10%;
+    }
+    25% {
+        top: 30%;
+        left: 60%;
+    }
+    50% {
+        top: 70%;
+        left: 80%;
+    }
+    75% {
+        top: 40%;
+        left: 20%;
+    }
+    100% {
+        top: 10%;
+        left: 10%;
+    }
+}
+
+.mini-fish {
+    left: 50%; /* Start in the middle horizontally */
+    animation: none; /* Disable CSS animation */
+}
