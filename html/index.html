@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Tank</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+</head>
+<body>
+<!-- ------------------------------------------------------------------------------------- -->
+    <div class="background-container">
+        <img src="../image/fish leg.gif" class="fish fish-leg" alt="Fish Leg">
+        <img src="../image/fish 1.gif" class="fish fish1" alt="Fish 1">
+        <img src="../image/Mini fish.gif" class="mini-fish" alt="Mini Fish">
+        <img src="../image/monster fish.gif" class="fish monster-fish" alt="monster fish">
+        <img src="../image/yallow.gif" class="fish yallow-fish" alt="yallow fish">
+<!-- ------------------------------------------------------------------------------------- -->
+        <img src="../image/Seaweed.gif" class="seaweed-1" alt="seaweed">
+        <img src="../image/Seaweed.gif" class="seaweed-2" alt="seaweed">
+<!-- ------------------------------------------------------------------------------------- -->
+        <img src="../image/sparking bubblegif.gif" class="bubble-1" alt="buble">
+        <img src="../image/sparking bubblegif.gif" class="bubble-2" alt="buble">
+<!-- ------------------------------------------------------------------------------------- -->
+        <div class="settings-button">
+
+            <button onclick="toggleSettings()">
+                <img src="../image/Setting Button.png" class ="button-1"alt="Setting Button">
+            </button>
+      
+            <div id="settings-dropdown" class="settings-dropdown">
+                <button onclick="changeBackground()">background change</button>
+                <button onclick="changeMusic()">music change</button>
+                <button onclick="playMusic()">play</button>
+                <button onclick="pauseMusic()">pause</button>
+            </div>
+            <audio id="background-music" src="../audio/music1.mp3" autoplay loop></audio>   
+        </div>
+<!-- ------------------------------------------------------------------------------------- -->       
+    </div>
+        <script src="../js/script.js"></script> 
+</body> 
+</html>
